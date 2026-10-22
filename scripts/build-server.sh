@@ -4,7 +4,7 @@
 set -e
 
 # Determine platform
-PLATFORM=$(rustc --print host-tuple 2>/dev/null || echo "unknown")
+PLATFORM=${VOICEBOX_TARGET:-$(rustc --print host-tuple 2>/dev/null || echo "unknown")}
 
 echo "Building Voicebox sidecars for platform: $PLATFORM"
 

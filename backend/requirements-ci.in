@@ -1,0 +1,22 @@
+# Deterministic backend unit tests; model weights and production TTS bundles
+# belong to the release/inference jobs, not unit-test dependency installation.
+pytest==9.1.1
+pytest-asyncio==1.4.0
+pytest-timeout==2.4.0
+fastapi>=0.109.0,<1
+sqlalchemy>=2.0.0,<3
+pydantic>=2.5.0,<3
+httpx>=0.27.0,<1
+python-multipart>=0.0.6
+Pillow>=10.0.0
+numpy>=1.24.0,<2.0
+numba>=0.60.0,<0.61.0
+librosa>=0.10.0
+soundfile>=0.12.0
+huggingface-hub>=0.20.0,<1
+transformers>=4.36.0,<=4.57.6
+fastmcp>=3.0,<4.0
+pyinstaller>=6,<7
+tqdm
+# CPU wheels avoid downloading CUDA libraries for mocked inference tests.
+torch==2.14.1+cpu

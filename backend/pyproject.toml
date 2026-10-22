@@ -81,3 +81,6 @@ docstring-code-format = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
+markers = [
+    "slow: native build or hardware-dependent tests",
+]
