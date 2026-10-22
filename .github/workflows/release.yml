@@ -32,7 +32,7 @@ jobs:
             python-version: "3.12"
             backend: "pytorch"
 
-    runs-on: ${{ startsWith(matrix.platform, 'windows') && matrix.platform || startsWith(matrix.platform, 'macos') && fromJSON('["self-hosted","kalana-macos-ci","macOS"]') || fromJSON('["self-hosted","kalana-ci","Linux"]') }}
+    runs-on: ${{ startsWith(matrix.platform, 'windows') && matrix.platform || startsWith(matrix.platform, 'macos') && fromJSON('["self-hosted","kalana-macos-ci","macOS"]') || fromJSON('["kalana-ci"]') }}
 
     timeout-minutes: 90
     steps:

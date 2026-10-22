@@ -1,6 +1,6 @@
 # CI coverage
 
-Linux quality jobs use `[self-hosted, kalana-ci, Linux]`. Native Apple checks and
+Linux quality jobs use `kalana-ci`. Native Apple checks and
 releases use `[self-hosted, kalana-macos-ci, macOS]`. Windows checks/builds keep
 their GitHub-hosted Windows runners: the repository owner explicitly requested
 preserving Windows coverage because no self-hosted Windows runner is available.
