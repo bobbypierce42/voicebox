@@ -8,7 +8,7 @@ on:
 
 jobs:
   frontend-quality:
-    runs-on: ubuntu-latest
+    runs-on: kalana-ci
 
     steps:
       - uses: actions/checkout@v4
