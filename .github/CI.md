@@ -14,6 +14,12 @@ Every trusted pull request and push to main runs:
 - Native Rust desktop compilation, including integration-test targets, on macOS
   and Windows. The macOS code also exercises the Swift/ScreenCaptureKit build path.
 
+Backend dependency installation uses uv's package-scoped `--torch-backend cpu`:
+PyTorch packages come from the CPU wheel repository, while general dependencies
+come from PyPI. The lock retains exact versions and hashes; neither compilation
+nor installation enables unsafe cross-index matching. To refresh it, use the
+command recorded at the top of `backend/requirements-ci.txt`.
+
 Six scripts under backend/tests are interactive model/server evaluation harnesses;
 CI excludes those scripts rather than downloading models or assuming a running
 backend. GPU, native audio-capture runtime permissions, model quality, signing,
